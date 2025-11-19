@@ -3,10 +3,10 @@ background-color: #02182B;
 color: aqua;
 }
 nav{
-display: flex;
-justify-content:space-between ;
-height:50px ;
 top:0;
+display: flex;
+justify-content: space-between;
+height:50px ;
 position: fixed;
 }
 #logoNav{
