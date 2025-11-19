@@ -9,11 +9,14 @@ background-color: #02182B;
 color: aqua;
 }
 nav{
+width: 100%;
 top:0;
 display: flex;
-justify-content: space-between;
+justify-content:space-between;
 height:50px ;
 position: fixed;
+background-color: #02182B;
+z-index: 2;
 }
 #logoNav{
 width: 200px;
