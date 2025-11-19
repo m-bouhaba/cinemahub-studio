@@ -1,0 +1,28 @@
+
+
+.heroSection{
+  background-image:  url('./pages/images/herofilm.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroSection h1{
+font-family: "Inria Serif", serif;
+  font-weight: 700;
+  color: white;
+  font-size: 80px;
+}
+
+.red {
+  color: red;
+}
+
+.heroSection p{
+font-family: "Inria Serif", serif;
+  font-weight: 500;
+  color: rgb(255, 0, 0);
+  font-size: 32px;
+}
