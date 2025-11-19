@@ -6,7 +6,7 @@ body {
   min-width: 320px;
   min-height: 100vh; */
 background-color: #02182B;
-color: aqua;
+color: white;
 }
 nav{
 width: 100%;
@@ -25,4 +25,61 @@ height: 50px;
 #contactIcone{
 width: 45px;
 height: 45px;  
+}
+footer{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footerElement{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 30px 0;
+}
+.footerElement img{
+  width: 161px;;
+  height: 82px;
+}
+.footerElement p{
+  text-align: center;
+  font-family: "Inria Serif", serif;
+  font-weight: 30;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+.formFooter{
+  display: flex;
+  gap: 15px;
+}
+.formFooter input{
+  width: 336px;
+  height: 26px;
+  border-radius: 10px;
+  border-color: #0197F6;
+  background-color: #02182B;
+  color: white;  
+}
+.formFooter ::placeholder{
+  color: white;
+}
+.formFooter button{
+  width: 100px;
+  height: 30px;
+  background: linear-gradient(
+    90deg,
+    #0197F6 0%, 
+    #02182B 50%, 
+    #d7263d 100% 
+  );
+  color: white;
+  border: none;
+  border-radius:10px ;
+}
+.copyright{
+  width: 100%;
+  background-color: #0197F6;
+  text-align: center;
 }
