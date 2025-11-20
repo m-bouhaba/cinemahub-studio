@@ -60,7 +60,7 @@
 .cardsContainer {
   display: flex;          /* utiliser flex pour le scroll horizontal */
   gap: 100px;
-  overflow-x: hidden;       /* scroll horizontal */
+  overflow-x: auto;       /* scroll horizontal */
   scroll-behavior: smooth;
   padding-bottom: 10px;   /* espace pour le scroll */
   
