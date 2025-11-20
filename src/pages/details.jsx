@@ -1,31 +1,52 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
 import moviesData from "../data/data"
+import { useState } from "react";
 
 export default function Details() {
+  const [showVideo, setShowVideo] = useState(false);
   const { title } = useParams();
-console.log('======' + title)
-  // Décoder "The%20Mask" → "The Mask"
   const decodedTitle = decodeURIComponent(title);
-console.log('decoder' + decodedTitle)
 
-  // Trouver le film en comparant le titre
   const movie = moviesData.find(
     (m) => m.title.toLowerCase() === decodedTitle.toLowerCase()
   );
 
   return (
-    <div className='containerDetails' style={{ backgroundImage: `url(${movie.imageDetails})` }}>
+    <div className={`containerDetails ${showVideo ? "noOverlay" : ""}`} 
+         style={{ backgroundImage: `url(${movie.imageDetails})` }}>
+
+      {/* Bouton Play */}
+      <button className="playButton" onClick={() => setShowVideo(true)}>
+         ▶ Play
+      </button>
+
+      {/* Détails du film */}
       <div className='details'>
         <h1>{movie.title}</h1>
         <p>Sortie: {movie.year} </p>
         <p>Durée: {movie.duration} </p>
-        <p>Acteur principaux: {movie.actors}</p>
+        <p>Acteurs principaux: {movie.actors.join(", ")}</p>
         <p>{movie.description} </p>
-
-
       </div>
-   
+
+      {/* Vidéo YouTube */}
+      {showVideo && (
+        <div className="videoOverlay" onClick={() => setShowVideo(false)}>
+          <div className="videoContainer" onClick={(e) => e.stopPropagation()}>
+            <iframe 
+              width="00" 
+              height="500"
+              src={`${movie.video}?rel=0&controls=0`} 
+              title="Movie Trailer"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 }
