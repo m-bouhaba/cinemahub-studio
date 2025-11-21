@@ -129,7 +129,7 @@ const moviesData = [
     category: "Comedy",
     image: "/images/The_Mask.jpg",
     imageDetails: "/images/The_Mask_paysage.jpg",
-    video: "https://www.youtube.com/embed/LZl69yk5lEY",
+    video: "https://www.youtube.com/embed/jxSvjnuBeRM",
     duration: "1h41",
     actors: ["Jim Carrey", "Cameron Diaz"],
     description: "Un employé timide devient un personnage excentrique grâce à un masque magique."
