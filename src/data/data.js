@@ -409,7 +409,7 @@ const moviesData = [
     category: "Family",
     image: "/images/Shrek.jpg",
     imageDetails: "/images/Shrek_paysage.jpg",
-    video: "https://www.youtube.com/embed/ljkGhlJkR0I",
+    video: "https://www.youtube.com/embed/CwXOrWvPBPk?si=2hDDEmsiiLIZ9Qy7",
     duration: "1h30",
     actors: ["Mike Myers", "Eddie Murphy"],
     description: "Un ogre part sauver une princesse avec l’aide d’un âne bavard."
@@ -481,7 +481,7 @@ const moviesData = [
     category: "Family",
     image: "/images/Big_Hero_6.jpg",
     imageDetails: "/images/Big_Hero_6_paysage.jpg",
-    video: "https://www.youtube.com/embed/8IdMPxfx0y8",
+    video: "https://www.youtube.com/embed/vco0SpSz17g?si=m1BsBwQVqhqd8JPr",
     duration: "1h42",
     actors: ["Ryan Potter", "Scott Adsit"],
     description: "Un jeune inventeur et son robot affrontent un méchant mystérieux pour sauver la ville."
