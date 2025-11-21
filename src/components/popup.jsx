@@ -13,14 +13,22 @@ export default function Popup() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleSubscribe = () => {
+    const handleSubscribe = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (email.trim() === "") {
-      setError("Veuillez entrer votre adresse email.");
-      return;
+        setError("Veuillez entrer votre adresse email.");
+        return;
     }
 
-    setShow(false);
-  };
+    if (!emailRegex.test(email)) {
+        setError("Veuillez entrer une adresse email valide.");
+        return;
+    }
+
+  // Si tout est bon, fermer la popup
+  setShow(false);
+};
 
   const closePopup = () => {
     setShow(false);

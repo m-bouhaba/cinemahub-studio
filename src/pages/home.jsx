@@ -113,7 +113,15 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-
+            <section className='categorie'>
+                <h2> Top 10 du moment</h2>
+                <div className='categorieName'>
+                    <button>Action</button>
+                    <button>Comedy</button>
+                    <button>Drame</button>
+                    <button>Famille</button>
+                </div>            
+            </section>
 
         </>
     )
