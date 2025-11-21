@@ -480,7 +480,7 @@ const moviesData = [
     year: 2014,
     category: "Family",
     image: "/images/Big_Hero_6.jpg",
-    imageDetails: "/images/Big_Hero_6_paysage.jpg",
+    imageDetails: "/images/Big_Hero_6_paysage.png",
     video: "https://www.youtube.com/embed/8IdMPxfx0y8",
     duration: "1h42",
     actors: ["Ryan Potter", "Scott Adsit"],

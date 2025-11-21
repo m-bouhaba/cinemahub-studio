@@ -32,8 +32,16 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-
             <section className='top10Section'>
+                <h2> Catégorie</h2>
+                <div className='categorieName'>
+                   <a href="#action"><button >Action</button></a>
+                   <a href="#comedy"><button >Comedy</button></a>
+                   <a href="#drame"><button> Drame</button></a>
+                   <a href="#famille"><button >Famille</button></a>
+                </div>            
+            </section>
+            <section id='action' className='top10Section' >
                 <h2>Action</h2>
                 <div className="cardsContainer">
                 {moviesData
@@ -42,9 +50,9 @@ export default function Home() {
                     <Link 
                         key={index} 
                         to={`/movie/${movie.title}`} 
-                        className="movieCard"
+                        className="movieCardRed"
                     >
-                    <div key={index} className="movieCard">
+                    <div key={index} className="movieCardRed">
                         <img src={movie.image} alt={movie.title} />
                         <h1>{movie.title}</h1>
                     </div>
@@ -53,7 +61,7 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-            <section className='top10Section'>
+            <section id='comedy' className='top10Section'>
                 <h2>Comedy</h2>
                 <div className="cardsContainer">
                 {moviesData
@@ -62,9 +70,9 @@ export default function Home() {
                     <Link 
                         key={index} 
                         to={`/movie/${movie.title}`} 
-                        className="movieCard"
+                        className="movieCardRed"
                     >
-                    <div key={index} className="movieCard">
+                    <div key={index} className="movieCardRed">
                         <img src={movie.image} alt={movie.title} />
                         <h1>{movie.title}</h1>
                     </div>
@@ -73,8 +81,8 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-            <section className='top10Section'>
-                <h2>Drama</h2>
+            <section id='drame' className='top10Section'>
+                <h2>Drame</h2>
                 <div className="cardsContainer">
                 {moviesData
                     .filter(movie => movie.category === "Drama")
@@ -82,9 +90,9 @@ export default function Home() {
                     <Link 
                         key={index} 
                         to={`/movie/${movie.title}`} 
-                        className="movieCard"
+                        className="movieCardRed"
                     >
-                    <div key={index} className="movieCard">
+                    <div key={index} className="movieCardRed">
                         <img src={movie.image} alt={movie.title} />
                         <h1>{movie.title}</h1>
                     </div>
@@ -93,8 +101,8 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-            <section className='top10Section'>
-                <h2>Family</h2>
+            <section id='famille' className='top10Section'>
+                <h2>Famille</h2>
                 <div className="cardsContainer">
                 {moviesData
                     .filter(movie => movie.category === "Family")
@@ -102,9 +110,9 @@ export default function Home() {
                     <Link 
                         key={index} 
                         to={`/movie/${movie.title}`} 
-                        className="movieCard"
+                        className="movieCardRed"
                     >
-                    <div key={index} className="movieCard">
+                    <div key={index} className="movieCardRed">
                         <img src={movie.image} alt={movie.title} />
                         <h1>{movie.title}</h1>
                     </div>
@@ -113,15 +121,7 @@ export default function Home() {
                 ))}
                 </div>
             </section >
-            <section className='categorie'>
-                <h2> Top 10 du moment</h2>
-                <div className='categorieName'>
-                    <button>Action</button>
-                    <button>Comedy</button>
-                    <button>Drame</button>
-                    <button>Famille</button>
-                </div>            
-            </section>
+            
 
         </>
     )

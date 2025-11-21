@@ -46,8 +46,10 @@
 
 .top10Section {
   margin: 0 20px;
-    display: flex;
+  padding-top: 40px;
+  display: flex;
  flex-direction: column;
+ gap: 20px;
  margin: 0 20px;
 
 }
@@ -62,6 +64,7 @@
 .cardsContainer::-webkit-scrollbar {
   display: none; 
 }
+
 
 .movieCard {
   text-decoration: none !important;
@@ -84,6 +87,34 @@
 }
 
 .movieCard h1 {
+  margin: 0px;
+  padding: 9px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.movieCardRed {
+  text-decoration: none !important;
+  background-color: #d7263d;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.movieCardRed img {
+  width: 240px;
+  height: 272px;
+  /* object-fit: cover; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.movieCardRed:hover {
+  transform: translateY(3px) scale(1.03);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.5);
+}
+
+.movieCardRed h1 {
+  height: 40px;
   margin: 0px;
   padding: 9px;
   font-size: 20px;
@@ -153,8 +184,13 @@
   flex-direction: column;
   margin-left: 50px;
 }
+.blue{
+  color: #0197F6;
+}
 .details p {
-  font-size: 29px;
+  font-size: 25px;
+  font-family: "Poppins";
+  font-weight: 200;
 }
 
 /* Bouton Play */
@@ -168,13 +204,13 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background-color:#d7263d;
+  background-color:#0197F6;
   color: white;
   transition: 0.3s;
   z-index: 2;
 }
 .playButton:hover {
-  background-color: rgba(255, 0, 0, 1);
+  background-color: #d7263d;
 }
 
 /* Overlay vidéo */
@@ -207,7 +243,13 @@
   left: 10px;
   font-size: 28px;
   color: white;
-  background:#d7263d;
+  background: linear-gradient(
+    
+    #0197F6 0%, 
+    #02182B 50%, 
+    #d7263d 100% 
+  );
+  border: none;
   padding: 10px 18px;
   border-radius: 10px;
   text-decoration: none;
