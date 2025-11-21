@@ -5,20 +5,25 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [isValid, setIsValid] = useState(false);
 
 
   const handleClick = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // Vérifier champs vides
     if (!nom || !email || !message) {
       setFeedback("Tous les champs sont obligatoires.");
+      setIsValid(false); 
     }
     // Vérifier email simple
-    else if (!email.includes("@") || !email.includes(".")) {
+    else if (!emailRegex.test(email)) {
       setFeedback("Email doit avoir un format valide.");
+      setIsValid(false); 
     }
     // Succès
     else {
       setFeedback("Message envoyé avec succès !");
+      setIsValid(true); 
     }
   };
 
@@ -57,7 +62,14 @@ export default function Contact() {
             S'abonner
           </button>
 
-          <p>{feedback}</p>
+          {feedback && (
+            <p 
+              className="popup-error" 
+              style={{ color: isValid ? "limegreen" : "red" }}
+            >
+              {feedback}
+            </p>
+          )}
         </form>
       </div>
     </div>
