@@ -7,7 +7,7 @@ const moviesData = [
     category: "Action",
     image: "/images/Mad_Max.jpg",
     imageDetails: "/images/Mad_Max_paysage.jpg",
-    video: "https://www.youtube.com/embed/hEJnMQG9ev8",
+    video: "https://www.youtube.com/embed/hEJnMQG9ev8?si=bjgzcpBYjOIkQek5",
     duration: "2h",
     actors: ["Tom Hardy", "Charlize Theron"],
     description: "Une femme se rebelle contre un dirigeant tyrannique dans un désert post-apocalyptique."
@@ -19,7 +19,7 @@ const moviesData = [
     category: "Action",
     image: "/images/John_Wick.jpg",
     imageDetails: "/images/John_Wick_paysage.jpg",
-    video: "https://www.youtube.com/embed/2AUmvWm5ZDQ",
+    video: "https://www.youtube.com/embed/C0BMx-qxsP4?si=m-NhlpJsKiqBqEVf",
     duration: "1h41",
     actors: ["Keanu Reeves", "Michael Nyqvist"],
     description: "Un ancien tueur à gages cherche vengeance après la mort de son chien."
