@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from "react-router-dom";
 import moviesData from "../data/data"
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Details() {
   const [showVideo, setShowVideo] = useState(false);
@@ -14,9 +15,10 @@ export default function Details() {
 
   return (
     <div className={`containerDetails ${showVideo ? "noOverlay" : ""}`} 
-         style={{ backgroundImage: `url(${movie.imageDetails})` }}>
+        style={{ backgroundImage: `url(${movie.imageDetails})` }}>
 
-      {/* Bouton Play */}
+       <Link to="/" className="backButton">←</Link>
+
       <button className="playButton" onClick={() => setShowVideo(true)}>
          ▶ Play
       </button>

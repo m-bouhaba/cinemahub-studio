@@ -31,7 +31,87 @@ export default function Home() {
                     </Link>
                 ))}
                 </div>
+            </section >
 
+            <section className='top10Section'>
+                <h2>Action</h2>
+                <div className="cardsContainer">
+                {moviesData
+                    .filter(movie => movie.category === "Action")
+                    .map((movie, index) => (
+                    <Link 
+                        key={index} 
+                        to={`/movie/${movie.title}`} 
+                        className="movieCard"
+                    >
+                    <div key={index} className="movieCard">
+                        <img src={movie.image} alt={movie.title} />
+                        <h1>{movie.title}</h1>
+                    </div>
+
+                    </Link>
+                ))}
+                </div>
+            </section >
+            <section className='top10Section'>
+                <h2>Comedy</h2>
+                <div className="cardsContainer">
+                {moviesData
+                    .filter(movie => movie.category === "Comedy")
+                    .map((movie, index) => (
+                    <Link 
+                        key={index} 
+                        to={`/movie/${movie.title}`} 
+                        className="movieCard"
+                    >
+                    <div key={index} className="movieCard">
+                        <img src={movie.image} alt={movie.title} />
+                        <h1>{movie.title}</h1>
+                    </div>
+
+                    </Link>
+                ))}
+                </div>
+            </section >
+            <section className='top10Section'>
+                <h2>Drama</h2>
+                <div className="cardsContainer">
+                {moviesData
+                    .filter(movie => movie.category === "Drama")
+                    .map((movie, index) => (
+                    <Link 
+                        key={index} 
+                        to={`/movie/${movie.title}`} 
+                        className="movieCard"
+                    >
+                    <div key={index} className="movieCard">
+                        <img src={movie.image} alt={movie.title} />
+                        <h1>{movie.title}</h1>
+                    </div>
+
+                    </Link>
+                ))}
+                </div>
+            </section >
+            <section className='top10Section'>
+                <h2>Family</h2>
+                <div className="cardsContainer">
+                {moviesData
+                    .filter(movie => movie.category === "Family")
+                    .map((movie, index) => (
+                    <Link 
+                        key={index} 
+                        to={`/movie/${movie.title}`} 
+                        className="movieCard"
+                    >
+                    <div key={index} className="movieCard">
+                        <img src={movie.image} alt={movie.title} />
+                        <h1>{movie.title}</h1>
+                    </div>
+
+                    </Link>
+                ))}
+                </div>
             </section >
 
 
