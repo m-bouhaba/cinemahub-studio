@@ -35,7 +35,7 @@ export default function Details() {
         <div className="videoOverlay" onClick={() => setShowVideo(false)}>
           <div className="videoContainer" onClick={(e) => e.stopPropagation()}>
             <iframe 
-              width="00" 
+              width="900" 
               height="500"
               src={`${movie.video}?rel=0&controls=0`} 
               title="Movie Trailer"
