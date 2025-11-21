@@ -26,10 +26,10 @@ export default function Details() {
       {/* Détails du film */}
       <div className='details'>
         <h1>{movie.title}</h1>
-        <p>Sortie: {movie.year} </p>
-        <p>Durée: {movie.duration} </p>
-        <p>Acteurs principaux: {movie.actors.join(", ")}</p>
-        <p>{movie.description} </p>
+        <p><span className="blue">Sortie:</span> {movie.year} </p>
+        <p><span className="blue">Durée:</span> {movie.duration} </p>
+        <p><span className="blue">Acteurs principaux: </span> {movie.actors.join(", ")}</p>
+        <p className='description'>{movie.description} </p>
       </div>
 
       {/* Vidéo YouTube */}
